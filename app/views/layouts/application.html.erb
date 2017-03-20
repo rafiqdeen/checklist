@@ -2,13 +2,37 @@
 <html>
 <head>
   <title>Checklist</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body>
 
-<%= yield %>
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <%= link_to "Checklist", root_path, class: "navbar-brand" %>
+    </div>
+    <ul class="nav navbar-nav">
+      <li>Sign Up</li>
+
+      <li>Sign Out</li>
+
+      <li>Log In</li>
+
+    </ul>
+  </div>
+</nav>
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+<div class="container">
+
+  <%= yield %>
+
+</div>
 
 </body>
 </html>
