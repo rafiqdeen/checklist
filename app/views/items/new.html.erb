@@ -1,5 +1,16 @@
 <div class="form-horizontal col-xs-12 col-sm-6 col-md-8">
   <fieldset>
+    <% if @item.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@item.errors.count, "Error") %> prohibited
+            this Item from being saved:</h2>
+          <ul>
+            <% @item.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
     <%= form_for :item, url: items_path do |f| %>
         <legend>New Checklist Item</legend>
         <div class="form-group">
@@ -20,7 +31,7 @@
         <div class="form-group">
           <div class="col-lg-10 col-lg-offset-2">
             <%= f.submit "Submit", :class => "btn btn-primary" %>
-            <button type="reset" class="btn btn-default">Cancel</button>
+            <%= link_to 'Cancel', items_path, :class => "btn btn-default" %>
           </div>
         </div>
     <% end %>

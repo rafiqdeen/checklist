@@ -1,8 +1,9 @@
 <div class="col-md-6 col-md-offset-3">
-  <h2><%= @item.title %></h2>
-  <p><%= @item.description %></p>
+  <h2>Title: <%= @item.title %></h2>
+  <p>Description: <%= @item.description %></p>
+  <hr>
 
-  <%= link_to "Edit", edit_item_path(@item) %>
-  <%= link_to "Delete", item_path(@item), method: :delete, data: { confirm: "Are you sure?" } %>
-  <%= link_to "Back", root_path %>
+  <%= link_to "Edit", edit_item_path(@item), :class => "btn btn-primary" %>
+  <%= link_to "Delete", item_path(@item), method: :delete, data: {confirm: "Are you sure?"}, :class => "btn btn-primary" %>
+  <%= link_to "Back", root_path, :class => "btn btn-default" %>
 </div>
