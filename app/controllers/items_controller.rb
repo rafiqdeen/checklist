@@ -29,6 +29,12 @@ class ItemsController < ApplicationController
     redirect_to root_path, notice: "Item successfully completed!"
   end
 
+  def incomplete
+    @item = Item.find(params[:id])
+    @item.update_attribute(:completed_at, nil)
+    redirect_to root_path, notice: "Item InProgress!"
+  end
+
   private
   def item_params
     params.require(:item).permit(:title, :description)
