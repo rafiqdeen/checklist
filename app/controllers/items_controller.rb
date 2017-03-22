@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :find_item, only: [:show, :edit, :update, :destroy]
 
   def index
     @items = Item.all
@@ -36,6 +37,12 @@ class ItemsController < ApplicationController
     end
   end
 
+  def destroy
+    @item = Item.find(params[:id])
+    @item.destroy
+    redirect_to root_path
+  end
+
   def complete
     @item = Item.find(params[:id])
     @item.update_attribute(:completed_at, Time.now)
@@ -51,5 +58,9 @@ class ItemsController < ApplicationController
   private
   def item_params
     params.require(:item).permit(:title, :description)
+  end
+
+  def find_item
+    @item = Item.find(params[:id])
   end
 end
