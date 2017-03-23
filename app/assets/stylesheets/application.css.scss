@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  */
-
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700|Merriweather:400,300);
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -21,73 +20,90 @@
 /* Mixins, variables, etc... */
 
 @mixin nav_link_hover {
-	transition: 0.4s;
-	color: lighten(#222, 30%);
-	text-decoration: none;
+  transition: 0.4s;
+  color: lighten(#222, 30%);
+  text-decoration: none;
 }
 
 /* Universal styles */
 
 body {
-	font-family: 'Merriweather', serif;
+  font-family: 'Oswald', sans-serif;
+  .btn {
+    font-size: 16px;
+  }
 }
 
 a {
-	color: darken(#e7e7e7, 70%);
+  color: darken(#e7e7e7, 70%);
 }
 
 /* Navbar and navigation styles */
 
 .navbar {
-	font-family: 'Oswald', sans-serif;
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .navbar-default {
 
-	padding-top: 5px;
-	padding-bottom: 5px;
-	background-color: #3682c3;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #3682c3;
 
-	.navbar-nav > li > a {
-		color: #222;
-	}
+  .navbar-nav > li > a {
+    color: white;
+    font-size: 15px;
+  }
 
-	.navbar-link {
-		color: #222;
-	}
+  .navbar-link {
+    color: white;
+    font-size: 15px;
+  }
 
-	.navbar-brand {
-		color: #222;
-		letter-spacing: 1.25px;
-	}
-
+  .navbar-brand {
+    color: white;
+    letter-spacing: 1.25px;
+    font-size: 20px;
+  }
+  .fa-lg {
+    vertical-align: 0%;
+  }
+  .navbar-brand:hover {
+    color: white;
+  }
+  .navbar-nav > li > a:hover {
+    background-color: white;
+    color: #3682c3;
+  }
+  .navbar-link:hover {
+    color: white;
+  }
 }
 
 /* Item styles */
 
 .item {
-	border-bottom: 1px solid #e7e7e7;
-	padding-bottom: 1.5em;
-	.item-title {
-		font-family: 'Oswald', sans-serif;
-		margin-top: 0;
-	}
-	.item-desc {
-		font-size: 1em;
-	}
-	.time-ago {
-		color: darken(#e7e7e7, 50%);
-		font-size: 0.85em;
-		letter-spacing: 1.25;
-	}
-	.item-sub-title {
-		margin-bottom: 0;
-	}
+  border-bottom: 1px solid #e7e7e7;
+  padding-bottom: 1.5em;
+  .item-title {
+    font-family: 'Oswald', sans-serif;
+    margin-top: 0;
+  }
+  .item-desc {
+    font-size: 1em;
+  }
+  .time-ago {
+    color: darken(#e7e7e7, 50%);
+    font-size: 0.85em;
+    letter-spacing: 1.25;
+  }
+  .item-sub-title {
+    margin-bottom: 0;
+  }
 }
 
 .item:nth-child(n+1) {
-	padding-top: 1.5em;
+  padding-top: 1.5em;
 }
 
 

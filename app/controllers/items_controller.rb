@@ -1,24 +1,27 @@
 class ItemsController < ApplicationController
   before_action :find_item, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index]
 
   def index
-    @items = Item.all
+    if user_signed_in?
+      @items = current_user.items
+    end
   end
 
   def new
-    @item = Item.new
+    @item = current_user.items.new
   end
 
   def show
-    @item = Item.find(params[:id])
+    @item = current_user.items.find(params[:id])
   end
 
   def edit
-    @item = Item.find(params[:id])
+    @item = current_user.items.find(params[:id])
   end
 
   def create
-    @item = Item.new(item_params)
+    @item = current_user.items.new(item_params)
 
     if @item.save
       redirect_to @item
@@ -28,7 +31,7 @@ class ItemsController < ApplicationController
   end
 
   def update
-    @item = Item.find(params[:id])
+    @item = current_user.items.find(params[:id])
 
     if @item.update(item_params)
       redirect_to @item
@@ -38,19 +41,19 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @item = Item.find(params[:id])
+    @item = current_user.items.find(params[:id])
     @item.destroy
     redirect_to root_path
   end
 
   def complete
-    @item = Item.find(params[:id])
+    @item = current_user.items.find(params[:id])
     @item.update_attribute(:completed_at, Time.now)
     redirect_to root_path, notice: "Item successfully completed!"
   end
 
   def incomplete
-    @item = Item.find(params[:id])
+    @item = current_user.items.find(params[:id])
     @item.update_attribute(:completed_at, nil)
     redirect_to root_path, notice: "Item InProgress!"
   end

@@ -1,3 +1,4 @@
+<% if user_signed_in? %>
 <div class="col-md-6 col-md-offset-3">
   <% @items.each do |item| %>
       <div class="index-wrapper">
@@ -38,3 +39,7 @@
       </div>
   <% end %>
 </div>
+<% else %>
+    <%= render 'landing_page' %>
+<% end %>
+
