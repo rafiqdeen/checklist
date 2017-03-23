@@ -2,6 +2,9 @@
 <html>
 <head>
   <title>Checklist</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -19,12 +22,24 @@
       <li><%= link_to "Sign Up", new_user_registration_path %></li>
       <% if current_user.present? %>
           <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= current_user.profile_name %>
+              <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+              <li class="divider"></li>
+              <li><a href="seperated link here">Separated link</a></li>
+            </ul>
+          </li>
+
+
       <% else %>
           <li><%= link_to "Log In", new_user_session_path %></li>
       <% end %>
     </ul>
     <% if user_signed_in? %>
         <%= link_to "New Item", new_item_path, class: "navbar-text navbar-link navbar-right" %>
+
     <% end %>
   </div>
 </nav>
