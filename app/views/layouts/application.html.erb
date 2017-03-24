@@ -26,12 +26,11 @@
             <a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= current_user.profile_name %>
               <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+              <li><%= link_to "Settings", edit_user_registration_path %></li>
               <li class="divider"></li>
               <li><a href="seperated link here">Separated link</a></li>
             </ul>
           </li>
-
 
       <% else %>
           <li><%= link_to "Log In", new_user_session_path %></li>
