@@ -123,10 +123,16 @@ a {
 
 /* Footer */
 
+footer {
+  clear: both;
+  position:fixed;
+  bottom:0;
+  width: 100%;
+}
+
 .copyright {
   min-height: 40px;
-  background-color: #000000;
-
+  background-color: #252525;
   .fa-copyright{
     vertical-align: 1px;
   }
