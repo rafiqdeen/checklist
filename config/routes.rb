@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root "items#index"
   devise_for :users
   resources :users
   resources :items do
@@ -7,7 +8,7 @@ Rails.application.routes.draw do
       patch :incomplete
     end
   end
-  root "items#index"
+  get '/about' => 'items#about'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
