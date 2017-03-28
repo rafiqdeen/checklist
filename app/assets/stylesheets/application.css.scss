@@ -27,11 +27,31 @@
 
 /* Universal styles */
 
+#notice_wrapper {
+  opacity: 0.9;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 999;
+  background: #089465;
+  .alert, .notice {
+    padding: 1.95rem;
+    text-align: center;
+    margin: 0;
+    font-weight: 200;
+    color: #fff;
+    letter-spacing: 2px;
+  }
+}
+
 body {
   font-family: 'Oswald', sans-serif;
   font-size: 15px;
   .btn {
     font-size: 20px;
+  }
+  .container.main{
+    margin-top: 6%;
   }
 }
 
@@ -125,8 +145,8 @@ a {
 
 footer {
   clear: both;
-  position:fixed;
-  bottom:0;
+  position: fixed;
+  bottom: 0;
   width: 100%;
   border-top: 1px solid #dddddd;
 }
@@ -134,7 +154,7 @@ footer {
 .copyright {
   min-height: 40px;
   background-color: white;
-  .fa-copyright{
+  .fa-copyright {
     vertical-align: 1px;
   }
 }
