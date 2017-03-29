@@ -52,7 +52,8 @@ body {
     font-size: 20px;
   }
   .main{
-    margin-top: 3%;
+    margin-top: 20px;
+    margin-bottom: 20px;
     background: #FFF;
     box-shadow: 5px 5px 5px #888888;
   }
@@ -60,6 +61,16 @@ body {
     font-size: 20px;
     color: rgba(0,0,0,.5);
   }
+  .container{
+    width: 90%;
+  }
+  .container.project{
+    margin-bottom: 6%;
+  }
+  .jumbotron, .col-md-6.col-md-offset-3{
+    margin-top: 3%;
+  }
+
 }
 
 .form-control {
@@ -145,6 +156,12 @@ a {
   .item-sub-title {
     margin-bottom: 0;
   }
+  .fa-check-square-o, .fa-square-o{
+    color: #008080;
+  }
+  .fa-times{
+    color: #800000;
+  }
 }
 
 .item:nth-child(n+1) {
@@ -155,9 +172,11 @@ a {
 
 footer {
   clear: both;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  margin-bottom:0px;
   border-top: 1px solid #dddddd;
 }
 
