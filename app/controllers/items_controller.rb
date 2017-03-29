@@ -4,7 +4,8 @@ class ItemsController < ApplicationController
 
   def index
     if user_signed_in?
-      @items = current_user.items
+      @items = current_user.items.order("created_at DESC")
+      @items_by_month = @items.group_by { |post| post.created_at.strftime("%m/%d/%Y") }
     end
   end
 

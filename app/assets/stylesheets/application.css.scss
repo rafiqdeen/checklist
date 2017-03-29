@@ -47,11 +47,18 @@
 body {
   font-family: 'Oswald', sans-serif;
   font-size: 15px;
+  background: #F5F5F5;
   .btn {
     font-size: 20px;
   }
-  .container.main{
-    margin-top: 6%;
+  .main{
+    margin-top: 3%;
+    background: #FFF;
+    box-shadow: 5px 5px 5px #888888;
+  }
+  .group_by{
+    font-size: 20px;
+    color: rgba(0,0,0,.5);
   }
 }
 
