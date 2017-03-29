@@ -1,15 +1,15 @@
 <% if user_signed_in? %>
     <% @items_by_month.each do |date, items| %>
         <div class="col-md-6 col-md-offset-3 main">
-          <span class="group_by"><%= date %></span>
+          <span class="group_by"><%= date_customizer(date) %></span>
           <% items.each do |item| %>
               <div class="index-wrapper">
 
                 <div class="row item">
                   <% if item.completed? %>
                       <div class="col-md-8">
-                        <h2 style="opacity: 0.5;" class="item-title"><strike><%= link_to item.title, item %></strike>
-                        </h2>
+                        <h3 style="opacity: 0.5;" class="item-title"><strike><%= link_to item.title, item %></strike>
+                        </h3>
                         <p style="opacity: 0.5;" class="item-sub-title item-desc"><%= item.description %></p>
                         <p style="opacity: 0.5;" class="time-created-at item-sub-title">Completed <%= time_ago_in_words(item.completed_at) %>
                           ago</p>
@@ -21,7 +21,7 @@
                           </div>
                   <% else %>
                       <div class="col-md-8">
-                        <h2 class="item-title"><%= link_to item.title, item %></h2>
+                        <h3 class="item-title"><%= link_to item.title, item %></h3>
                         <p class="item-sub-title item-desc"><%= item.description %></p>
                         <p style="opacity: 0.5;" class="time-created-at item-sub-title">Created <%= time_ago_in_words(item.created_at) %>
                           ago</p>
