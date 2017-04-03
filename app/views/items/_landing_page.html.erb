@@ -1,8 +1,18 @@
-<div class="jumbotron">
-  <span class="welcome-note">Welcome to Checklist<sup><i class="fa fa-plus"></i></sup></span>
-  <h3><i class="fa fa-check" aria-hidden="true"></i> Be Super Productive! </h3>
-  <h3><i class="fa fa-check" aria-hidden="true"></i> A simple way to make free checklists. </h3>
-  <h3><i class="fa fa-check" aria-hidden="true"></i> Make unlimited private checklists that only you can see.</h3>
-  <%= link_to "Get Started", new_user_registration_path, class: "btn btn-success" %>
-  <%= link_to "Log In", new_user_session_path, class: "btn btn-primary" %>
+<div class="container welcome-note">
+  <div class="row">
+    <div class="col-lg-5 col-sm-6">
+      <h2 class="section-heading">WELCOME TO CHECKLIST !</h2>
+      <hr class="section-heading-spacer">
+      <!--<div class="clearfix"></div>-->
+      <h2 class="section-heading">Keep your task in sync.</h2>
+      <p class="lead">Make Unlimited Private Checklists that only you can see.</p>
+      <p class="lead">Getting ready for the day? Take CHECKLIST with you. </p>
+      <%= link_to "Get Started", new_user_registration_path, class: "btn btn-success" %>
+      <%= link_to "Log In", new_user_session_path, class: "btn btn-primary" %>
+    </div>
+    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+      <img class="img-responsive" src="https://cdn2.iconfinder.com/data/icons/seo-web-optimization-ultimate-part-2/512/check_list-512.png" alt="">
+    </div>
+  </div>
 </div>
+

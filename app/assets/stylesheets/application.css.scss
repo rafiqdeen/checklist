@@ -51,23 +51,23 @@ body {
   .btn {
     font-size: 20px;
   }
-  .main{
+  .main {
     margin-top: 20px;
     margin-bottom: 20px;
     background: #FFF;
     box-shadow: 5px 5px 5px #888888;
   }
-  .group_by{
+  .group_by {
     font-size: 20px;
-    color: rgba(0,0,0,.5);
+    color: rgba(0, 0, 0, .5);
   }
-  .container{
+  .container {
     width: 90%;
   }
-  .container.project{
+  .container.project {
     margin-bottom: 6%;
   }
-  .jumbotron, .col-md-6.col-md-offset-3{
+  .jumbotron, .col-md-6.col-md-offset-3 {
     margin-top: 3%;
   }
 
@@ -77,15 +77,14 @@ body {
   font-size: 15px;
 }
 
-.form-horizontal{
+.form-horizontal {
   margin-top: 5%;
   margin-left: 13%;
 }
 
 .welcome-note {
-  padding-left: 35%;
+  padding-top: 5%;
   font-size: 40px;
-  color: #3682c3;
 }
 
 a {
@@ -161,10 +160,10 @@ a {
   .item-sub-title {
     margin-bottom: 0;
   }
-  .fa-check-square-o, .fa-square-o{
+  .fa-check-square-o, .fa-square-o {
     color: #0F7E22;
   }
-  .fa-times{
+  .fa-times {
     color: #800000;
   }
 }
@@ -177,11 +176,11 @@ a {
 
 footer {
   clear: both;
-  position:fixed;
-  bottom:0px;
-  left:0px;
-  right:0px;
-  margin-bottom:0px;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
   border-top: 1px solid #dddddd;
 }
 
@@ -223,3 +222,8 @@ footer {
   font-size: 14px;
 }
 
+.img-responsive {
+  height: 280px;
+  padding-top: 25px;
+  padding-left: 35%;
+}

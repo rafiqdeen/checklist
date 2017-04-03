@@ -2,6 +2,7 @@
     <% @items_by_month.each do |date, items| %>
         <div class="col-md-6 col-md-offset-3 main">
           <span class="group_by"><%= date_customizer(date) %></span>
+
           <% items.each do |item| %>
               <div class="index-wrapper">
 
